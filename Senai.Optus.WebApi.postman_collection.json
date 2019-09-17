@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "a1fa8642-7cbf-4d2a-9dab-8bb628c98f3b",
+		"name": "Senai.Optus.WebApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Estilos",
+			"item": [
+				{
+					"name": "Estilos.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/estilos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"estilos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Estilos.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"Funk\"\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/estilos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"estilos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Estilos.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/estilos/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"estilos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Estilos.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/estilos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"estilos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Estilos.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idEstilo\" : 1,\n\t\"nome\" : \"Funk\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/estilos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"estilos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Artistas",
+			"item": [
+				{
+					"name": "Artistas.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/artistas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"artistas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Artistas.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"nome\": \"Mc Gigica\",\n        \"idEstilo\": 1\n\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/artistas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"artistas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Usuarios.Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGF2ZSI6IjAxMjM0NTY3ODkiLCJlbWFpbCI6ImMueUBtYWlsLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBRE9SIiwiZXhwIjoxNTY2OTMwMTQxLCJpc3MiOiJHdWZvcy5XZWJBcGkiLCJhdWQiOiJHdWZvcy5XZWJBcGkifQ.O1jec7S4w4omw8hDN_KlEJt3rMSOwlw4yS-5_7pOCC8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"admin@email.com\",\n\t\"senha\" : \"123456\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
